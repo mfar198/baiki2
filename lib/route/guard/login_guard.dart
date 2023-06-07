@@ -13,7 +13,7 @@ class LoginGuard extends AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {
     if (userRepository is AuthenticationAuthenticated) {
-      router.push(IntroRoute(title: 'Intro'));
+      router.push(IntroRoute(/**title: 'Intro'**/));
       //resolver.next(true);
     } else if (userRepository is AuthenticationUnauthenticated) {
       router.push(LoginRoute(userRepository: userRepository));

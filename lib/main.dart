@@ -41,7 +41,6 @@ void main() async {
             return AuthenticationBloc(userRepository: userRepository)
               ..add(AppStarted());
           },
-          child: NavBarScreen(),
         ),
         BlocProvider<ListBloc>(
           create: (context) => ListBloc(),

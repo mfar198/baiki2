@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:baiki2/repository/login/repository.dart';
 
-import '../modules/dashboard/view.dart';
+import '../modules/dashboard/view.dart.bak.bak';
 
 //Pages
 import 'package:baiki2/modules/login/view.dart';
@@ -20,23 +20,24 @@ class AppRouter extends _$AppRouter {
 
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(
+        /**AutoRoute(
       page: LoginRoute.page,
       guards: [LoginGuard(userRepository: UserRepository())],
-    ),
-    AutoRoute(
-      page: IntroRoute.page,
-      guards: [AuthGuard(userRepository: UserRepository())],
-      initial: true,
-      children: [
+    ),**/
         AutoRoute(
-          page: NavBarRoute.page,
+            //page: NavBarRoute.page,
+            page: DashboardRoute.page,
+            //guards: [AuthGuard(userRepository: UserRepository())],
+            initial: true,
+            /**children: [
+              AutoRoute(
+          //page: NavBarRoute.page,
+          page: IntroRoute.page,
           initial: true,
         ),
-        AutoRoute(
-          page: DashboardRoute.page,
-        )
-      ]
-    ),
-  ];
+              AutoRoute(
+                page: DashboardRoute.page,
+              )
+            ]**/),
+      ];
 }
