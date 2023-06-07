@@ -19,7 +19,7 @@ class NavBarScreen extends StatelessWidget implements PreferredSizeWidget {
         child: FittedBox(
           alignment: AlignmentDirectional.centerStart,
           fit: BoxFit.cover,
-          child: Image.asset(''),
+          child: Image.asset('assets/images/Baiki.png'),
         ),
       ),
       actions: [

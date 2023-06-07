@@ -43,9 +43,9 @@ class AppBar extends StatelessWidget {
 
 @RoutePage()
 class IntroScreen extends StatefulWidget {
-  const IntroScreen({super.key, required this.title});
+  //const IntroScreen({super.key, required this.title});
 
-  final String title;
+  //final String title;
 
   @override
   State<IntroScreen> createState() => _IntroScreenState();
@@ -76,13 +76,13 @@ class _IntroScreenState extends State<IntroScreen> {
                     left: -15,
                     top: 10,
                     child:
-                    Image.asset('', width: 290, height: 290,)
+                    Image.asset('assets/images/Laptop.png', width: 290, height: 290,)
                 ),
                 Positioned(
                     top: -75,
                     right: 20,
                     child:
-                    Image.asset('', width: 320, height: 320,)
+                    Image.asset('assets/images/Nearest_Repair.png', width: 320, height: 320,)
                 ),
                 Positioned(
                   bottom: 115,
@@ -120,13 +120,13 @@ class _IntroScreenState extends State<IntroScreen> {
                     left: 45,
                     top: -20,
                     child:
-                    Image.asset('', width: 320, height: 320,)
+                    Image.asset('assets/images/ALR.png', width: 320, height: 320,)
                 ),
                 Positioned(
                     top: -80,
                     right: -100,
                     child:
-                    Image.asset('', width: 350, height: 350,)
+                    Image.asset('assets/images/Hand.png', width: 350, height: 350,)
                 ),
                 Positioned(
                   bottom: 90,

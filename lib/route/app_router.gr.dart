@@ -22,13 +22,9 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     IntroRoute.name: (routeData) {
-      final args = routeData.argsAs<IntroRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: IntroScreen(
-          key: args.key,
-          title: args.title,
-        ),
+        child: IntroScreen(),
       );
     },
     LoginRoute.name: (routeData) {
@@ -66,39 +62,16 @@ class DashboardRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [IntroScreen]
-class IntroRoute extends PageRouteInfo<IntroRouteArgs> {
-  IntroRoute({
-    Key? key,
-    required String title,
-    List<PageRouteInfo>? children,
-  }) : super(
+class IntroRoute extends PageRouteInfo<void> {
+  const IntroRoute({List<PageRouteInfo>? children})
+      : super(
           IntroRoute.name,
-          args: IntroRouteArgs(
-            key: key,
-            title: title,
-          ),
           initialChildren: children,
         );
 
   static const String name = 'IntroRoute';
 
-  static const PageInfo<IntroRouteArgs> page = PageInfo<IntroRouteArgs>(name);
-}
-
-class IntroRouteArgs {
-  const IntroRouteArgs({
-    this.key,
-    required this.title,
-  });
-
-  final Key? key;
-
-  final String title;
-
-  @override
-  String toString() {
-    return 'IntroRouteArgs{key: $key, title: $title}';
-  }
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
