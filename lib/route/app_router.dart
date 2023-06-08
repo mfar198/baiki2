@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:baiki2/repository/login/repository.dart';
 
-import '../modules/dashboard/view.dart.bak.bak';
+import '../modules/dashboard/view.dart';
 
 //Pages
 import 'package:baiki2/modules/login/view.dart';
@@ -29,15 +29,15 @@ class AppRouter extends _$AppRouter {
             page: DashboardRoute.page,
             //guards: [AuthGuard(userRepository: UserRepository())],
             initial: true,
-            /**children: [
-              AutoRoute(
-          //page: NavBarRoute.page,
-          page: IntroRoute.page,
-          initial: true,
-        ),
+            children: [
+              /**AutoRoute(
+                //page: NavBarRoute.page,
+                page: IntroRoute.page,
+                initial: true,
+              ),**/
               AutoRoute(
                 page: DashboardRoute.page,
               )
-            ]**/),
+            ]),
       ];
 }
