@@ -43,6 +43,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const NavBarScreen(),
       );
     },
+    DetailRoute.name: (routeData) {
+      final args = routeData.argsAs<DetailRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: DetailScreen(
+          selectedItem: args.selectedItem,
+          key: args.key,
+        ),
+      );
+    },
   };
 }
 
@@ -123,4 +133,41 @@ class NavBarRoute extends PageRouteInfo<void> {
   static const String name = 'NavBarRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [DetailScreen]
+class DetailRoute extends PageRouteInfo<DetailRouteArgs> {
+  DetailRoute({
+    required Data selectedItem,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          DetailRoute.name,
+          args: DetailRouteArgs(
+            selectedItem: selectedItem,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'DetailRoute';
+
+  static const PageInfo<DetailRouteArgs> page = PageInfo<DetailRouteArgs>(name);
+}
+
+class DetailRouteArgs {
+  const DetailRouteArgs({
+    required this.selectedItem,
+    this.key,
+  });
+
+  final Data selectedItem;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'DetailRouteArgs{selectedItem: $selectedItem, key: $key}';
+  }
 }

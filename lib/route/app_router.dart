@@ -2,12 +2,14 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:baiki2/repository/login/repository.dart';
 
+import '../model/list/model.dart';
 import '../modules/dashboard/view.dart';
 
 //Pages
 import 'package:baiki2/modules/login/view.dart';
 import 'package:baiki2/modules/intro/intro_screen.dart';
 import 'package:baiki2/modules/navBar/appBar.dart';
+import '../modules/dashboard_detail/view.dart';
 import 'guard.dart';
 //Route
 
@@ -37,6 +39,9 @@ class AppRouter extends _$AppRouter {
               ),**/
               AutoRoute(
                 page: DashboardRoute.page,
+                children: [
+                  AutoRoute(page: DetailRoute.page)
+                ]
               )
             ]),
       ];
